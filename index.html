@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel=" stylesheet" href="styles.css">
+    <title>Express Emoji | 🙂🥰🤪😱 </title>
+</head>
+
+<body>
+    <!-- <h1>Happy : 🙂😃😄😊🙃😇😁😆🤭😂🤣🤣</h1>
+    <h1>Love : 😊🤗🤭❤️😙😚😘🥰💖🥰😍💞</h1>
+    <h1>Crazy : 😛😋🧐💩😜🤮🤪😝🤑🥴🤪😈</h1>
+    <h1>Fear : 😐🙄😟👻😯😲😣😖😫😨😱😭</h1> -->
+
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="title">Express Emoji </h1>
+            <!-- Copy Section=========================== -->
+            <div class="copySection">
+                <input placeholder="Select Feelings" readonly class="copyEmoji" data-copyEmoji>
+                <button class="copyBtn" data-btnCopy>
+                    <span class="copyMsg" data-copyMsg></span>
+                    <img src="assets/copy.svg" alt="copy" width="33" height="33">
+                </button>
+            </div>
+            <!-- Input Section========================== -->
+            <div class="inputSection">
+                <div class="countContainer">
+                    <p>Emoji Count</p>
+                    <p>9</p>
+                </div>
+                <input class="slider" type="range" min="1" max="20" data-slider>
+                <!-- Feeling Sub Section -->
+                <div class="feelingSection">
+                    <div class="feeling">
+                        <input type="checkbox" class="check" data-happyCheck id="happy">
+                        <label for="happy">Happy</label>
+                    </div>
+                    <div class="feelingSliderContainer">
+                        <input type="range" class="fslider" min="1" max="4" data-happySlider>
+                        <p>😂 </p>
+                    </div>
+                    <div class="feeling">
+                        <input type="checkbox" class="check" data-happyCheck id="love">
+                        <label for="love">Love</label>
+                    </div>
+                    <div class="feelingSliderContainer">
+                        <input type="range" min="1" max="4" class="fslider" data-loveSlider>
+                        <p>🥰 </p>
+                    </div>
+                    <div class="feeling">
+                        <input type="checkbox" class="check" data-happyCheck id="crazy">
+                        <label for="crazy">Crazy</label>
+                    </div>
+                    <div class="feelingSliderContainer">
+                        <input type="range" min="1" max="4" class="fslider" data-crazySlider>
+                        <p>🤪</p>
+                    </div>
+                    <div class="feeling">
+                        <input type="checkbox" class="check" data-happyCheck id="fear">
+                        <label for="fear">Fear</label>
+                    </div>
+                    <div class="feelingSliderContainer">
+                        <input type="range" min="1" max="4" class="fslider" data-fearSlider>
+                        <p>😱</p>
+                    </div>
+                </div>
+
+                <button class="getFeelingBtn" data-getFeelingBtn>Display Feeling</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
