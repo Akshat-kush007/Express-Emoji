@@ -90,6 +90,13 @@ body {
     cursor: pointer;
 }
 
+.copyBtn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
 .copyMsg {
     position: absolute;
     right: -60%;
@@ -171,6 +178,13 @@ body {
     color: white;
     background-image: linear-gradient(var(--backgroung), var(--blue));
     transition: all 0.4s;
+}
+
+.getFeelingBtn:active {
+    transform: scale(0.95);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.644);
+    /* Lowering the shadow */
 }
 
 .selectFeelingMsg {
