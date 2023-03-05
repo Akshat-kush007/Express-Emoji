@@ -21,27 +21,28 @@ body {
     width: 100vw;
     background: url(assets/background1.jpg);
     background-size: cover;
-
+    /* text-align: center; */
 }
 
 .wrapper {
     height: 100%;
-    width: 100%;
     overflow-y: scroll;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .container {
     width: 90%;
-    /* height: 90%;
-    max-width: min-content; */
+    height: 90%;
+
     max-width: 450px;
     padding: 6px;
-    margin-top: 1rem;
+
     margin-bottom: 1rem;
-    /* overflow: auto; */
+
 }
 
 .title {
@@ -115,6 +116,7 @@ body {
     border-radius: 1.2rem;
     background: #2c2c2c25;
     backdrop-filter: blur(15px);
+    /* padding-bottom: 1rem; */
 }
 
 .countContainer {
