@@ -13,14 +13,21 @@
     --cayn: rgb(6, 214, 160);
     --blue: rgb(17, 138, 178);
     --nightGreen: rgb(7, 59, 76);
-    --backgroung: rgb(147, 246, 228);
+    --backgroung: rgb(83, 248, 218);
 }
 
-.wrapper {
+body {
     height: 100vh;
     width: 100vw;
     background: url(assets/background1.jpg);
     background-size: cover;
+
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,8 +35,12 @@
 
 .container {
     width: 90%;
+    /* height: 90%;
+    max-width: min-content; */
     max-width: 450px;
     padding: 6px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     /* overflow: auto; */
 }
 
@@ -41,7 +52,7 @@
     color: white;
     background-image: linear-gradient(var(--backgroung), var(--blue), transparent);
     border-radius: 1rem 1rem 0 0;
-
+    cursor: default;
 }
 
 .copySection {
@@ -56,36 +67,37 @@
     margin: 1rem 0;
 }
 
-.copySection input {
+.copyEmoji {
+    cursor: pointer;
     background: none;
     border: none;
     font-size: 1.5rem;
-    line-height: 30px;
+    line-height: 40px;
     width: 300px;
+    width: 100%;
     padding: 6px;
-}
-
-.copySection input::placeholder {
-    font-size: 2rem;
     color: white;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
+
 
 .copyBtn {
     position: relative;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .copyMsg {
     position: absolute;
-    right: -100%;
+    right: -60%;
     top: -100%;
-    background-color: var(--vb-violet);
-    color: hsl(52, 100%, 62%);
-    opacity: 0.75;
+    background-color: var(--nightGreen);
+    color: white;
+    opacity: 0.85;
     font-size: 20px;
+    font-weight: 700;
     padding: 0.3rem 0.6rem;
     border-radius: 1rem;
     scale: 0;
@@ -141,14 +153,17 @@
     right: 10px;
     top: -15px;
     font-size: 2.8rem;
+    cursor: default;
 }
 
 .getFeelingBtn {
+    position: relative;
     width: 100%;
     background: none;
-    border: 4px solid white;
+    border: 4px solid rgb(255, 255, 255);
     border-radius: 1rem;
     padding: 1rem;
+    margin-top: 30px;
     font-size: 2rem;
     font-weight: bold;
     color: white;
@@ -156,6 +171,22 @@
     transition: all 0.4s;
 }
 
+.selectFeelingMsg {
+    position: absolute;
+    top: -40px;
+    left: 26%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-image: linear-gradient(var(--backgroung), var(--blue), transparent);
+    border-radius: 1rem;
+    scale: 0;
+    transition: all 0.4s;
+}
+
+.active {
+    scale: 1;
+    transform: translateY(-10px);
+}
 
 /* Sliders========================================= */
 
@@ -166,11 +197,24 @@
     cursor: pointer;
     width: 100%;
     height: 0.75rem;
-    background-color: var(--backgroung);
+    background-color: white;
     border-radius: 1rem;
-    margin: 1rem 1rem 1.5rem 0;
-    background-image: linear-gradient(var(--vb-violet), var(--vb-violet));
-    /* box-shadow: 0px 0px 20px 0px cyan; */
+    margin: 1rem 1rem 2rem 0;
+    background-image: linear-gradient(var(--backgroung), var(--backgroung));
+    background-repeat: no-repeat;
+
+    /* appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(black, black);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none; */
 }
 
 .slider::-webkit-slider-thumb {
@@ -218,11 +262,23 @@
     cursor: pointer;
     width: 60%;
     height: 0.55rem;
-    background-color: var(--backgroung);
+    background-color: white;
     border-radius: 1rem;
     margin: 1rem 0 1.5rem 0;
-    background-image: linear-gradient(var(--vb-violet), var(--vb-violet));
-    /* box-shadow: 0px 0px 20px 0px cyan; */
+    background-image: linear-gradient(var(--backgroung), var(--backgroung));
+    /* 
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 0.75rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 1rem 1rem 2rem 0;
+    background-image: linear-gradient(var(--backgroung), var(--backgroung)); */
+    background-repeat: no-repeat;
+
 }
 
 .fslider::-webkit-slider-thumb {

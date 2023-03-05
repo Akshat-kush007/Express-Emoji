@@ -21,7 +21,8 @@
             <h1 class="title">Express Emoji </h1>
             <!-- Copy Section=========================== -->
             <div class="copySection">
-                <input placeholder="Select Feelings" readonly class="copyEmoji" data-copyEmoji>
+                <!-- <input placeholder="Select Feelings" readonly class="copyEmoji" data-copyEmoji> -->
+                <p class="copyEmoji" data-copyEmoji>Select Feelings</p>
                 <button class="copyBtn" data-btnCopy>
                     <span class="copyMsg" data-copyMsg></span>
                     <img src="assets/copy.svg" alt="copy" width="33" height="33">
@@ -31,46 +32,48 @@
             <div class="inputSection">
                 <div class="countContainer">
                     <p>Emoji Count</p>
-                    <p>9</p>
+                    <p data-emojiCount>9</p>
                 </div>
                 <input class="slider" type="range" min="1" max="20" data-slider>
                 <!-- Feeling Sub Section -->
                 <div class="feelingSection">
                     <div class="feeling">
-                        <input type="checkbox" class="check" data-happyCheck id="happy">
+                        <input type="checkbox" checked class="check" data-happyCheck id="happy">
                         <label for="happy">Happy</label>
                     </div>
                     <div class="feelingSliderContainer">
-                        <input type="range" class="fslider" min="1" max="4" data-happySlider>
-                        <p>😂 </p>
+                        <input type="range" id="happyId" class="fslider" min="1" max="4" data-happySlider>
+                        <p data-happyEmoji>😂 </p>
                     </div>
                     <div class="feeling">
-                        <input type="checkbox" class="check" data-happyCheck id="love">
+                        <input type="checkbox" class="check" data-loveCheck id="love">
                         <label for="love">Love</label>
                     </div>
                     <div class="feelingSliderContainer">
-                        <input type="range" min="1" max="4" class="fslider" data-loveSlider>
-                        <p>🥰 </p>
+                        <input type="range" id="loveId" min="1" max="4" class="fslider" data-loveSlider>
+                        <p data-loveEmoji>🥰 </p>
                     </div>
                     <div class="feeling">
-                        <input type="checkbox" class="check" data-happyCheck id="crazy">
+                        <input type="checkbox" class="check" data-crazyCheck id="crazy">
                         <label for="crazy">Crazy</label>
                     </div>
                     <div class="feelingSliderContainer">
-                        <input type="range" min="1" max="4" class="fslider" data-crazySlider>
-                        <p>🤪</p>
+                        <input type="range" id="crazyId" min="1" max="4" class="fslider" data-crazySlider>
+                        <p data-crazyEmoji>😈</p>
                     </div>
                     <div class="feeling">
-                        <input type="checkbox" class="check" data-happyCheck id="fear">
+                        <input type="checkbox" class="check" data-fearCheck id="fear">
                         <label for="fear">Fear</label>
                     </div>
                     <div class="feelingSliderContainer">
-                        <input type="range" min="1" max="4" class="fslider" data-fearSlider>
-                        <p>😱</p>
+                        <input type="range" id="fearId" min="1" max="4" class="fslider" data-fearSlider>
+                        <p data-fearEmoji>😱</p>
                     </div>
                 </div>
 
-                <button class="getFeelingBtn" data-getFeelingBtn>Display Feeling</button>
+                <button class="getFeelingBtn" data-getFeelingBtn>
+                    <span class="selectFeelingMsg" data-btnMessage>Select Feelings</span>
+                    Display Feeling</button>
             </div>
         </div>
     </div>
